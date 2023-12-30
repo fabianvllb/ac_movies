@@ -8,16 +8,19 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link';
 
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import TvIcon from '@mui/icons-material/Tv';
 
+import styles from './Navbar.module.css';
+
 const pages = [
   { name: 'Movies', href: '/movies', icon: LocalMoviesIcon },
   { name: 'TV Shows', href: '/tvshows', icon: TvIcon },
+  { name: 'Anime', href: '/anime', icon: TvIcon },
+  { name: 'In Theaters', href: '/intheaters', icon: TvIcon },
 ];
 
 function ResponsiveAppBar() {
@@ -40,6 +43,7 @@ function ResponsiveAppBar() {
             noWrap
             component="a"
             href="/"
+            aria-description='Go to homepage'
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -58,6 +62,7 @@ function ResponsiveAppBar() {
                 <Link
                   key={page.name}
                   href={page.href}
+                  className={styles.links}
                 >
                   {page.name}
                 </Link>

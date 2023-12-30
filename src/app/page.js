@@ -1,14 +1,13 @@
 import styles from './page.module.css'
-import TopNavBar from './ui/TopNavbar'
-
-const pages = ['Products', 'Pricing', 'Blog'];
+import Header from './ui/Header'
 
 export default function Home() {
 
   return (
     <main className={styles.main}>
       <div >
-        <TopNavBar />
+        <Header />
+        This is the main page
       </div>
     </main>
   )

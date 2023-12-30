@@ -1,11 +1,9 @@
-import TopNavBar from '../ui/TopNavbar';
+import Header from '../ui/Header';
 
 export default function Layout({ children }) {
   return (
     <div >
-      <div >
-        <TopNavBar />
-      </div>
+      <Header />
       <div >{children}</div>
     </div>
   );

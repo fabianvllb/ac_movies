@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Tvshows() {
+export default function Page() {
   return (
     <div>
       TV Shows page
