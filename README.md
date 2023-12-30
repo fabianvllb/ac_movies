@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, download the repository. cd into it and install requires libraries:
+
+```bash
+cd ac_movies
+npm install
+```
+
+
+Then, run the development server:
 
 ```bash
 npm run dev
