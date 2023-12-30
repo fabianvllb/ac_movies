@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, download the repository. cd into it and install requires libraries:
+First, download the repository, cd into it and install requires libraries:
 
 ```bash
 cd ac_movies
