@@ -1,10 +1,9 @@
-import Header from '../ui/Header';
+import styles from './page.module.css'
 
 export default function Layout({ children }) {
   return (
     <div >
-      <Header />
-      <div >{children}</div>
+      <div className={styles['main-container']}>{children}</div>
     </div>
   );
 }

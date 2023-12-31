@@ -1,10 +1,12 @@
 .links {
-  margin: 0px 10pt;
+  display: flex;
+  justify-content: center;
+  margin: 0px 5px;
   padding: 8px 12px;
   text-decoration: none;
   color: white;
-  /*border: 1px solid white;*/
   border-radius: 3px;
+  min-width: 6em;
 }
 
 .links:hover {

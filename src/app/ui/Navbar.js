@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            MOOVIES
+            AC_MOOVIES
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => {
@@ -124,7 +124,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            MOOVIES
+            AC_MOOVIES
           </Typography>
         </Toolbar>
       </Container>

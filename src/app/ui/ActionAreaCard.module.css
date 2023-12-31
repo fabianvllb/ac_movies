@@ -1,0 +1,16 @@
+.card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.scoreIcon {
+  width: 15px;
+  height: 15px;
+}
