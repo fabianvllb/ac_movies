@@ -11,11 +11,11 @@ import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Modal from '@mui/material/Modal';
-import Link from '@mui/material/Link';
+import Link from 'next/link'
 import { Container } from '@mui/material';
 
 export default function ActionAreaCard(props) {
-  const { imageUrl, imageAlt, title, score, trailerUrl } = props;
+  const { movieId, imageUrl, imageAlt, title, score, trailerUrl } = props;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const modalRef = React.useRef(null);
 
@@ -114,7 +114,10 @@ export default function ActionAreaCard(props) {
       </Modal>
 
       <Link
-        href='/movies/review'
+        href={{
+          pathname: '/movies/review',
+          query: { id: movieId },
+        }}
         sx={{
           textDecoration: 'none',
           color: 'black'

@@ -61,6 +61,7 @@ export default function Home() {
             {movies.map((movie) => {
               return (
                 <ActionAreaCard
+                  movieId={movie.id}
                   imageUrl={movie.imageUrl}
                   imageAlt={`${movie.title} poster`}
                   title={movie.title}
@@ -77,6 +78,7 @@ export default function Home() {
             {streaming.map((movie) => {
               return (
                 <ActionAreaCard
+                  movieId={movie.id}
                   imageUrl={movie.imageUrl}
                   imageAlt={`${movie.title} poster`}
                   title={movie.title}
