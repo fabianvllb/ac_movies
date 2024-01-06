@@ -10,6 +10,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import classNames from 'classnames';
 
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import TvIcon from '@mui/icons-material/Tv';
@@ -25,6 +27,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const pathname = usePathname();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -62,7 +65,9 @@ function ResponsiveAppBar() {
                 <Link
                   key={page.name}
                   href={page.href}
-                  className={styles.links}
+                  className={classNames(styles.links, {
+                    [styles.active]: pathname === page.href,
+                  })}
                 >
                   {page.name}
                 </Link>

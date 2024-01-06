@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 30px;
+  width: 55%;
+  border-radius: 2px;
+}
+
+.sectionTitle {
+  margin: 10px 0;
+}
+
+.mediaSection {
+  margin: 0 0 40px 0;
+}
+
+.movieImage {
+  margin: 0 30px;
+  float: right
+}
