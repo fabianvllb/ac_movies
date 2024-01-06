@@ -10,13 +10,9 @@
   display: flex;
   flex-direction: column;
   background-color: white;
+  width: 65%;
   padding: 10px 30px;
-  width: 55%;
   border-radius: 2px;
-}
-
-.sectionTitle {
-  margin: 10px 0;
 }
 
 .mediaSection {
@@ -26,4 +22,8 @@
 .movieImage {
   margin: 0 30px;
   float: right
+}
+
+.videoPlayer {
+  margin: 0;
 }
