@@ -21,11 +21,12 @@
 
 .movieImage {
   margin: 0 30px;
-  float: right
+  float: right;
 }
 
 .videoPlayer {
   margin: 0;
+  border: 0;
 }
 
 .leftPanelLinks {

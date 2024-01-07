@@ -82,7 +82,7 @@ export default function Home() {
         <section className={styles.mediaSection}>
           <h2 className={styles.sectionTitle}>Recently added Movies</h2>
           <Box className={styles.imageCarousel}>
-            {movies.map((movie) => {
+            {movies.map((movie, index) => {
               return (
                 <ActionAreaCard
                   movieId={movie.id}
@@ -91,6 +91,7 @@ export default function Home() {
                   title={movie.title}
                   score={movie.score}
                   trailerUrl={`${movie.trailerUrl}&autoplay=1`}
+                  key={index}
                 />
               );
             })}
@@ -99,7 +100,7 @@ export default function Home() {
         <section className={styles.mediaSection}>
           <h2 className={styles.sectionTitle}>Recently added on streaming</h2>
           <Box className={styles.imageCarousel}>
-            {streaming.map((movie) => {
+            {streaming.map((movie, index) => {
               return (
                 <ActionAreaCard
                   movieId={movie.id}
@@ -108,6 +109,7 @@ export default function Home() {
                   title={movie.title}
                   score={movie.score}
                   trailerUrl={`${movie.trailerUrl}&autoplay=1`}
+                  key={index}
                 />
               );
             })}

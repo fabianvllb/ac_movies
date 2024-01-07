@@ -4,18 +4,13 @@
   align-items: center;
   padding: 10px 0;
   height: 100%;
-  /*flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;*/
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  align-items: left;
   background-color: white;
+  margin-top: 10px;
   width: 65%;
   border-radius: 2px;
 }
@@ -41,8 +36,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.customAccordionSummary.Mui-expanded {
-}
+.customAccordionSummary.Mui-expanded {}
 
 /* Custom styles for AccordionDetails */
 .customAccordionDetails {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Container} from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Container, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './page.module.css'
 
@@ -59,19 +59,21 @@ export default function Page() {
   return (
     <div>
       <Container id='main-content' className={styles['main-content']}>
-        <br/><br/>
-        <h1 className={styles['sectionTitle']}>Frequently Asked Questions</h1>
-        <br/>
-        {faqs.map((faq, index) => (
-          <Accordion key={index} sx={{width: '100%'}}>
-            <AccordionSummary className={styles['customAccordionSummary']} expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="subtitle1">{faq.question}</Typography>
-            </AccordionSummary>
-            <AccordionDetails className={styles.customAccordionDetails}>
-              <Typography>{faq.answer}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', m: '10px 0' }}>
+          <h1 className={styles['sectionTitle']}>Frequently Asked Questions</h1>
+          <Box>
+            {faqs.map((faq, index) => (
+              <Accordion key={index} sx={{ width: '100%' }}>
+                <AccordionSummary className={styles['customAccordionSummary']} expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="subtitle1">{faq.question}</Typography>
+                </AccordionSummary>
+                <AccordionDetails className={styles.customAccordionDetails}>
+                  <Typography>{faq.answer}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </Box>
+        </Box>
       </Container>
     </div>
   );

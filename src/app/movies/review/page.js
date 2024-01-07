@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import Movie from '../../model/movie'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Link from 'next/link'
@@ -18,9 +19,17 @@ export default function Page() {
   const searchParams = useSearchParams()
   const movieId = searchParams.get('id')
   const [value, setValue] = React.useState(0);
+  const [isMovieSaved, setIsMovieSaved] = React.useState(false);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setValue(newValue)
+  };
+
+  const handleSaveMovie = () => {
+    if (isMovieSaved)
+      setIsMovieSaved(false)
+    else
+      setIsMovieSaved(true)
   };
 
   var movieData = Movie.getMovieById(parseInt(movieId))
@@ -29,18 +38,18 @@ export default function Page() {
   function MaintenanceTabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
-      <Container
+      <Box
         role="tabpanel"
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
-        sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', m: '20px 0', border: '1px solid  black' }}
+        sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
         {...other}
       >
         {value === index && (
           <Typography variant='body1'>{children}</Typography>
         )}
-      </Container>
+      </Box>
     )
   }
   function CustomTabPanel(props) {
@@ -80,9 +89,9 @@ export default function Page() {
           <Box sx={{ display: 'flex', flexDirection: 'column', p: '5px 15px' }}>
             <nav aria-label="other movie reviews">
               <List>
-                {dataList.map((movie) => {
+                {dataList.map((movie, index) => {
                   return (
-                    <ListItem disablePadding>
+                    <ListItem disablePadding key={index}>
                       <ListItemButton sx={{ gap: '20px' }} component={Link} href={`/movies/review?id=${movie.id}`}>
                         <Score score={movie.score} />
                         <ListItemText primary={movie.title} />
@@ -115,7 +124,7 @@ export default function Page() {
 
   return (
     <main className={styles.main}>
-      <Container id='main-content' className={styles['main-content']}>
+      <Container className={styles['main-content']}>
         <Box sx={{ display: 'flex', flexDirection: 'row', gap: '30px', m: '10px 0' }}>
 
           {/* left panel */}
@@ -129,19 +138,24 @@ export default function Page() {
               <CustomTabPanel value={value} index={0} dataList={movieList} />
               {/*<CustomTabPanel value={value} index={1} dataList={} />*/}
               {/*<CustomTabPanel value={value} index={2} dataList={} />*/}
-              <MaintenanceTabPanel value={value} index={1}>Nothing here yet!</MaintenanceTabPanel>
+              <MaintenanceTabPanel value={value} index={1}>No movies here yet</MaintenanceTabPanel>
               <MaintenanceTabPanel value={value} index={2}>Nothing here yet either!</MaintenanceTabPanel>
             </Box>
           </Box>
 
           {/* main view */}
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+          <Box id='main-content' sx={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '95%' }}>
               <Typography role='textbox' variant='h2' sx={{ fontSize: '1.5rem' }}>
                 {`${movieData.title} movie review`}
               </Typography>
-              <IconButton aria-label="Add to favourites" size="medium">
-                <FavoriteBorderIcon />
+              <IconButton onClick={handleSaveMovie} aria-label="Add to favourites" size="medium">
+                {!isMovieSaved && (
+                  <FavoriteBorderIcon />
+                )}
+                {isMovieSaved && (
+                  <FavoriteIcon color='warning' />
+                )}
               </IconButton>
             </Box>
 
@@ -178,9 +192,8 @@ export default function Page() {
               src={movieData.trailerUrl}
               title="YouTube video player"
               aria-label={`${movieData.title} trailer video`}
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen />
+              allowFullScreen />
           </Box>
         </Box>
 
