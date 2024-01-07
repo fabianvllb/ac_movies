@@ -19,6 +19,16 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  border-left: 3px solid rgb(83, 183, 245);
+  padding-left: 4px;
+}
+
+
 h2 {
   font-size: 1.1rem;
   font-weight: 600;

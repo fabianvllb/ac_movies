@@ -22,7 +22,7 @@ const pages = [
   { name: 'Movies', href: '/movies', icon: LocalMoviesIcon },
   { name: 'TV Shows', href: '/tvshows', icon: TvIcon },
   { name: 'Anime', href: '/anime', icon: TvIcon },
-  { name: 'In Theaters', href: '/intheaters', icon: TvIcon },
+  { name: 'FAQ', href: '/faq', icon: TvIcon },
 ];
 
 function ResponsiveAppBar() {
