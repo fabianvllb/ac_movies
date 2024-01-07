@@ -23,13 +23,13 @@ export default function ActionAreaCard(props) {
   var scoreIconAlt;
 
   if (score < 60) {
-    scoreIcon = 'https://docs-assets.developer.apple.com/published/94095adab2dbf237fdb79d39f2a13157/rotten-tomatoes-rating-icons-2@2x.png'
+    scoreIcon = '/images/rottenIcon.png'
     scoreIconAlt = 'rotten icon'
   } else if (60 < score && score < 75) {
-    scoreIcon = 'https://docs-assets.developer.apple.com/published/9426fd70cb3c493b0384adcb72bff351/rotten-tomatoes-rating-icons-1.png'
+    scoreIcon = '/images/freshIcon.png'
     scoreIconAlt = 'fresh icon'
   } else {
-    scoreIcon = 'https://docs-assets.developer.apple.com/published/0d9755fc21f147837c514a9b34e706d7/rotten-tomatoes-rating-icons-3@2x.png'
+    scoreIcon = '/images/certifiedFreshIcon.png'
     scoreIconAlt = 'certified fresh icon'
   }
 
