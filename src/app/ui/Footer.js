@@ -22,7 +22,7 @@ export default function Footer() {
           <h3 className={styles.header}>Stay Informed</h3>
           <p>Subscribe to our newsletter for the latest news and updates.</p>
 
-          <form onSubmit={handleSubscribe}>
+          <form onSubmit={handleSubscribe} >
             <Typography variant='body1' component="label" htmlFor='email' sx={{ marginRight: '10px' }}>We'll never share your email.</Typography>
             <input
               type="email"
@@ -31,6 +31,9 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              aria-errormessage='Email format is incorrect'
+              aria-invalid='true'
+              aria-required
             />
             <Button variant='contained' type="submit" size='small' sx={{ padding: '2px 8px', margin: '0 20px' }}>Subscribe</Button>
           </form>
