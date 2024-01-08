@@ -18,7 +18,7 @@ export default function Page() {
         <Box id='main-view' sx={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }}>
           <Box sx={{ display: 'flex', flexDirection: 'row' }}>
             <h1>
-              Our collection of movie review
+              Our collection of movie reviews
             </h1>
           </Box>
           <Box>

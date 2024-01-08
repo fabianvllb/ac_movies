@@ -20,8 +20,7 @@ import styles from './Navbar.module.css';
 
 const pages = [
   { name: 'Movies', href: '/movies', icon: LocalMoviesIcon },
-  { name: 'TV Shows', href: '/tvshows', icon: TvIcon },
-  { name: 'Anime', href: '/anime', icon: TvIcon },
+  { name: 'About us', href: '/aboutus', icon: TvIcon },
   { name: 'FAQ', href: '/faq', icon: TvIcon },
 ];
 
@@ -57,7 +56,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            AC_MOOVIES
+            AC_MOVIES
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => {
