@@ -1,5 +1,21 @@
-.main-container {
+.main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 10px;
   width: 65%;
+  padding: 10px 30px;
+  border-radius: 2px;
+}
+
+.columnTitles {
+  margin-left: 15px;
 }
