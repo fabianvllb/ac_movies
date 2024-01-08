@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import styles from './page.module.css'
 import ActionAreaCard from './ui/ActionAreaCard'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Link, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import Movie from './model/movie'
 
 export default function Home() {
@@ -37,38 +37,46 @@ export default function Home() {
         </section>
         <section className={styles.mediaSection}>
           <h2 className={styles.sectionTitle}>Recently added Movies</h2>
-          <Box className={styles.imageCarousel}>
-            {movieList.map((movie, index) => {
-              return (
-                <ActionAreaCard
-                  movieId={movie.id}
-                  imageUrl={movie.imageUrl}
-                  imageAlt={`${movie.title} poster`}
-                  title={movie.title}
-                  score={movie.score}
-                  trailerUrl={`${movie.trailerUrl}&autoplay=1`}
-                  key={index}
-                />
-              );
-            })}
+          <Box >
+            <nav aria-label="movie list">
+              <List className={styles.imageCarousel}>
+                {movieList.map((movie, index) => {
+                  return (
+                    <ActionAreaCard
+                      movieId={movie.id}
+                      imageUrl={movie.imageUrl}
+                      imageAlt={`${movie.title} poster`}
+                      title={movie.title}
+                      score={movie.score}
+                      trailerUrl={`${movie.trailerUrl}&autoplay=1`}
+                      key={index}
+                    />
+                  );
+                })}
+              </List>
+            </nav>
           </Box>
         </section>
         <section className={styles.mediaSection}>
-          <h2 className={styles.sectionTitle}>Recently added on streaming</h2>
-          <Box className={styles.imageCarousel}>
-            {tvShowsList.map((movie, index) => {
-              return (
-                <ActionAreaCard
-                  movieId={movie.id}
-                  imageUrl={movie.imageUrl}
-                  imageAlt={`${movie.title} poster`}
-                  title={movie.title}
-                  score={movie.score}
-                  trailerUrl={`${movie.trailerUrl}&autoplay=1`}
-                  key={index}
-                />
-              );
-            })}
+          <h2 className={styles.sectionTitle}>Recently added on tv shows</h2>
+          <Box >
+            <nav aria-label="tv show list">
+              <List className={styles.imageCarousel}>
+                {tvShowsList.map((movie, index) => {
+                  return (
+                    <ActionAreaCard
+                      movieId={movie.id}
+                      imageUrl={movie.imageUrl}
+                      imageAlt={`${movie.title} poster`}
+                      title={movie.title}
+                      score={movie.score}
+                      trailerUrl={`${movie.trailerUrl}&autoplay=1`}
+                      key={index}
+                    />
+                  );
+                })}
+              </List>
+            </nav>
           </Box>
         </section>
       </Container>
