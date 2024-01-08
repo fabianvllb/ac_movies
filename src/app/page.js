@@ -57,19 +57,19 @@ export default function Home() {
       <Container id='main-content' className={styles['main-content']}>
         <section className={styles.mediaSection}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', p: '0 20px', textAlign: 'justify' }}>
-            <h2 className={styles.sectionTitle}>Welcome to Moovies_AC!</h2>
+            <h1 className={styles.sectionTitle}>Welcome to Moovies_AC!</h1>
             <Typography variant='body1'>
               Thank you for visiting Moovies_AC – your ultimate destination for insightful movie and TV show reviews. We are thrilled to have you here!
             </Typography>
-            <h3>🎬 About Moovies_AC</h3>
+            <h2>🎬 About Moovies_AC</h2>
             <Typography variant='body1'>
               At Moovies_AC, we're passionate about the world of cinema and television. Our mission is to provide you with honest and comprehensive reviews, helping you make informed decisions about what to watch next. Whether you're a film buff or a casual viewer, our platform is designed to cater to your diverse tastes and preferences.
             </Typography>
-            <h3>🌟 Constantly Adding Reviews</h3>
+            <h2>🌟 Constantly Adding Reviews</h2>
             <Typography variant='body1'>
               Our team of dedicated reviewers is committed to bringing you the latest reviews and scores for both movies and TV shows. We understand that the entertainment landscape is ever-evolving, and we strive to stay ahead by continuously updating our content. Expect to find fresh perspectives, thoughtful analyses, and, most importantly, recommendations tailored just for you.
             </Typography>
-            <h3>🍿 Discover, Enjoy, and Stay Informed</h3>
+            <h2>🍿 Discover, Enjoy, and Stay Informed</h2>
             <Typography variant='body1'>
               Explore our collection of reviews, discover hidden gems, and stay up-to-date with the latest releases. Whether you're into blockbuster films, indie masterpieces, or binge-worthy TV series, Moovies_AC has something for everyone.
               <br /><br />
