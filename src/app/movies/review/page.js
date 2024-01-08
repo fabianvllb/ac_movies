@@ -161,8 +161,8 @@ export default function Page() {
             <Box>
               <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                 <Typography variant='body1' sx={{ textAlign: 'justify' }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Facilisis mauris sit amet massa. Turpis nunc eget lorem dolor sed.
-                  <br />Aliquet enim tortor at auctor urna nunc. Aliquet nec ullamcorper sit amet risus nullam eget. Adipiscing commodo elit at imperdiet dui accumsan.Viverra maecenas accumsan lacus vel facilisis. Consequat interdum varius sit amet mattis vulputate enim. Vitae et leo duis ut diam quam nulla porttitor massa. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Sapien eget mi proin sed libero enim. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Faucibus purus in massa tempor nec feugiat.
+                  In this cinematic journey, audiences are thrust into a captivating world where the line between reality and fantasy is blurred with masterful finesse. The film weaves a complex narrative, blending elements of suspense, drama, and a touch of the supernatural. From the opening scenes to the climactic finale, the storytelling is both gripping and thought-provoking, leaving viewers on the edge of their seats.
+                  <br />The cast delivers stellar performances, embodying their characters with depth and nuance. Their on-screen chemistry adds an authentic layer to the unfolding drama. The supporting cast also shines, providing memorable moments that enrich the overall tapestry. The cinematography is a visual feast, capturing the essence of the story in every frame.
                 </Typography>
                 <Image
                   className={styles.movieImage}
@@ -174,7 +174,7 @@ export default function Page() {
                 />
               </Box>
               <Typography variant='body1' sx={{ textAlign: 'justify' }}>
-                Nascetur ridiculus mus mauris vitae ultricies leo integer. Senectus et netus et malesuada fames ac turpis egestas integer. Duis convallis convallis tellus id interdum. Neque convallis a cras semper. Nascetur ridiculus mus mauris vitae ultricies leo integer. Senectus et netus et malesuada fames ac turpis egestas integer. Duis convallis convallis tellus id interdum. Neque convallis a cras semper.
+                Beyond its technical prowess, the movie explores profound themes that resonate on a universal level. It delves into the complexities of human relationships, the consequences of choices, and the relentless pursuit of one's true self. The film successfully navigates the delicate balance between entertainment and intellectual stimulation, offering a satisfying and thought-provoking cinematic experience. Without revealing too much, this enigmatic masterpiece is sure to leave audiences pondering its themes long after the credits roll, making it a must-watch for those seeking a film that transcends genres and challenges conventional storytelling norms.
               </Typography>
             </Box>
             <iframe
