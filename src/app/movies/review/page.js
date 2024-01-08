@@ -1,35 +1,29 @@
 'use client'
 import React from 'react'
 import styles from './page.module.css'
-import { Container, Typography, Box, IconButton } from '@mui/material'
+import { Container, Typography, Box, IconButton, Checkbox } from '@mui/material'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import Movie from '../../model/movie'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import Favorite from '@mui/icons-material/Favorite'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Link from 'next/link'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
+import AddToQueueIcon from '@mui/icons-material/AddToQueue'
+import RemoveFromQueueOutlinedIcon from '@mui/icons-material/RemoveFromQueueOutlined'
 
 export default function Page() {
   const searchParams = useSearchParams()
   const movieId = searchParams.get('id')
   const [value, setValue] = React.useState(0);
-  const [isMovieSaved, setIsMovieSaved] = React.useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
-  };
-
-  const handleSaveMovie = () => {
-    if (isMovieSaved)
-      setIsMovieSaved(false)
-    else
-      setIsMovieSaved(true)
   };
 
   var movieData = Movie.getMovieById(parseInt(movieId))
@@ -122,6 +116,9 @@ export default function Page() {
     };
   }
 
+  const favouriteLabel = { inputProps: { 'aria-label': 'Add to favourites' } }
+  const watchLaterLabel = { inputProps: { 'aria-label': 'Add to watch later playlist' } }
+
   return (
     <main className={styles.main}>
       <Container className={styles['main-content']}>
@@ -149,14 +146,10 @@ export default function Page() {
               <Typography role='textbox' variant='h2' sx={{ fontSize: '1.5rem' }}>
                 {`${movieData.title} movie review`}
               </Typography>
-              <IconButton onClick={handleSaveMovie} aria-label="Add to favourites" size="medium">
-                {!isMovieSaved && (
-                  <FavoriteBorderIcon />
-                )}
-                {isMovieSaved && (
-                  <FavoriteIcon color='warning' />
-                )}
-              </IconButton>
+              <Box>
+                <Checkbox {...favouriteLabel} icon={<FavoriteBorder />} checkedIcon={<Favorite color='warning' />} />
+                <Checkbox {...watchLaterLabel} icon={<AddToQueueIcon />} checkedIcon={<RemoveFromQueueOutlinedIcon />} />
+              </Box>
             </Box>
 
             {/* icon bar */}
