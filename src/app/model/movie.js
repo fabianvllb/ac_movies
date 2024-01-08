@@ -36,6 +36,44 @@ const moviesData = [
   },
 ];
 
+const tvshowsData = [
+  {
+    id: 5,
+    title: 'Dr. Death',
+    score: 80,
+    imageUrl: 'https://resizing.flixster.com/9OhWEw1VIc2OepA63GYc45GXA2o=/206x305/v2/https://resizing.flixster.com/EyjgA7ILgI4ymEufJXCku8GS8J0=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vODVhMzJhMzctYjNjNS00NzEyLTgwOGYtZTc5YjMwOTY5ZmNhLmpwZw==',
+    trailerUrl: 'https://www.youtube.com/embed/WUydwrPAY-M?si=ZxmFdQeXhryEtMYo',
+  },
+  {
+    id: 6,
+    title: 'What If...?',
+    score: 83,
+    imageUrl: 'https://resizing.flixster.com/ZY6oxl52fj6d7aFKJN8PqsEL0Qo=/206x305/v2/https://resizing.flixster.com/st7R24S0NNVYsn_4L-MStarRlL0=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vYmQyZjNlMDctOTVmZC00ZmQyLTgxOGQtZjA3OTg1ZTI0MmIyLmpwZw==',
+    trailerUrl: 'https://www.youtube.com/embed/TiEVqZ2Bc_c?si=Q9t7srJ3xov7G-wU',
+  },
+  {
+    id: 7,
+    title: 'Maestro',
+    score: 79,
+    imageUrl: 'https://resizing.flixster.com/9ksb0eFoytUoT86OohQBu83lnI0=/206x305/v2/https://resizing.flixster.com/QxuXNaDPg5NQX_DPml6C0zV1A5E=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzZmMDhiMTk1LTc5MzMtNGQ0OS04NTNiLTY2MWEwZDBkYjRlMi5qcGc=',
+    trailerUrl: 'https://www.youtube.com/embed/gJP2QblqLA0?si=hoCBJ45XukUTXr8n',
+  },
+  {
+    id: 8,
+    title: 'Percy Jackson and the Olympians',
+    score: 96,
+    imageUrl: 'https://resizing.flixster.com/-K5gGejxbdpRpmjMgLghxD_Vx-w=/206x305/v2/https://resizing.flixster.com/hJzR0MHvZQwWpNe48WQXUlnv6-8=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMTNlNzcyMjUtNDQxNS00NDllLTg5MzEtY2RmZmQxZDBhZGVmLmpwZw==',
+    trailerUrl: 'https://www.youtube.com/embed/uHb7au6Gmls?si=0B8F5FuWnvgEtoWO',
+  },
+  {
+    id: 9,
+    title: 'Rebel Moon: Part One - A Child of Fire',
+    score: 24,
+    imageUrl: 'https://resizing.flixster.com/CCTwucvqizkxoWsRKclAQauBRAQ=/206x305/v2/https://resizing.flixster.com/2bpFxoybigCD78l_tMP4wE7m6j4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2IwMmU1NmEwLTM0MzQtNDYzMC1iNWExLWFiMmNiMzRkNzcwZC5qcGc=',
+    trailerUrl: 'https://www.youtube.com/embed/fhr3MzT6exg?si=bMUfUM_129bDhb5G',
+  },
+];
+
 export default class Movie {
   constructor(id, title, score, imageUrl, trailerUrl) {
     this.id = id;
@@ -63,5 +101,23 @@ export default class Movie {
   static getAllMovies() {
     // Replace this with actual logic to fetch the list of movies from a database or API
     return moviesData;
+  }
+
+  static getTVShowById(id) {
+    // Replace this with actual logic to fetch the movie from a database or API
+    const data = tvshowsData.find((tvshow) => tvshow.id == id)
+
+    if (!data) {
+      console.error(`Movie with id ${id} not found.`);
+      return null;
+    }
+
+    const tvshow = new Movie(data.id, data.title, data.score, data.imageUrl, data.trailerUrl);
+    return tvshow;
+  }
+
+  static getAllTVShows() {
+    // Replace this with actual logic to fetch the list of movies from a database or API
+    return tvshowsData;
   }
 }
