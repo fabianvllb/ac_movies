@@ -1,0 +1,24 @@
+.footerMain {
+  /* Pushes the footer to the bottom of the container */
+  margin-top: auto;
+  background-color: #5f676b;
+  color: white;
+  padding: 40px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  align-items: center;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header {
+  margin: 7px 0;
+}
