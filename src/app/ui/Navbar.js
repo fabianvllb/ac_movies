@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar component="nav" aria-label='bar' position="static">
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography
