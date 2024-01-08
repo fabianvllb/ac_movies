@@ -27,13 +27,13 @@ export default function Footer() {
             <input
               type="email"
               id="email"
-              placeholder="Enter your email"
+              placeholder="example@examples.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               aria-errormessage='Email format is incorrect'
-              aria-invalid='true'
               aria-required
+              aria-describedby='Enter an email'
             />
             <Button variant='contained' type="submit" size='small' sx={{ padding: '2px 8px', margin: '0 20px' }}>Subscribe</Button>
           </form>
