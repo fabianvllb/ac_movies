@@ -13,7 +13,7 @@ export default function Home() {
       <Container id='main-content' className={styles['main-content']}>
         <section className={styles.mediaSection}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', p: '0 20px', textAlign: 'justify' }}>
-            <h1 className={styles.sectionTitle}>Welcome to Moovies_AC!</h1>
+            <h1 className={styles.sectionTitle}>Welcome to AC_Movies!</h1>
             <Typography variant='body1'>
               Thank you for visiting Moovies_AC – your ultimate destination for insightful movie and TV show reviews. We are thrilled to have you here!
             </Typography>

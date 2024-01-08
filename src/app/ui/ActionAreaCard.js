@@ -89,8 +89,7 @@ export default function ActionAreaCard(props) {
       <Modal
         open={isModalOpen}
         onClose={handleCloseModal}
-        aria-labelledby="video-modal-title"
-        aria-describedby="video-modal-description"
+        aria-labelledby={`${title} trailer`}
         onKeyDown={handleKeyPress}
       >
         <Box sx={{

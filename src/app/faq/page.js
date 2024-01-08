@@ -64,10 +64,10 @@ export default function Page() {
           <Box>
             {faqs.map((faq, index) => (
               <Accordion key={index} sx={{ width: '100%' }}>
-                <AccordionSummary className={styles['customAccordionSummary']} expandIcon={<ExpandMoreIcon />}>
+                <AccordionSummary aria-controls={`faq-${index}`} className={styles['customAccordionSummary']} expandIcon={<ExpandMoreIcon />}>
                   <Typography variant="subtitle1">{faq.question}</Typography>
                 </AccordionSummary>
-                <AccordionDetails className={styles.customAccordionDetails}>
+                <AccordionDetails id={`faq-${index}`} className={styles.customAccordionDetails}>
                   <Typography>{faq.answer}</Typography>
                 </AccordionDetails>
               </Accordion>
