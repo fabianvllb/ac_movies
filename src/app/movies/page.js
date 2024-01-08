@@ -8,6 +8,7 @@ import Score from './Score'
 
 export default function Page() {
   const movieList = Movie.getAllMovies()
+  const tvShowsList = Movie.getAllTVShows()
 
   return (
     <Container id='main-content' className={styles['main-content']}>
@@ -43,7 +44,7 @@ export default function Page() {
                 <h2 className={styles.columnTitles}>TV Shows</h2>
                 <nav aria-label="tv shows list">
                   <List>
-                    {movieList.map((movie, index) => {
+                    {tvShowsList.map((movie, index) => {
                       return (
                         <ListItem disablePadding key={index}>
                           <ListItemButton sx={{ gap: '20px' }} component={Link} href={`/movies/review?id=${movie.id}`}>

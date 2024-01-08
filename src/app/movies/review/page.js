@@ -27,6 +27,9 @@ export default function Page() {
   };
 
   var movieData = Movie.getMovieById(parseInt(movieId))
+  if (movieData == null || movieData == undefined) {
+    movieData = Movie.getTVShowById(parseInt(movieId))
+  }
   var movieList = Movie.getAllMovies()
 
   function MaintenanceTabPanel(props) {
