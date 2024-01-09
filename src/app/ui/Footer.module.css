@@ -22,3 +22,7 @@
 .header {
   margin: 7px 0;
 }
+
+.errormsg {
+  visibility: hidden;
+}
