@@ -15,11 +15,11 @@ export default function Home() {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', p: '0 20px', textAlign: 'justify' }}>
             <h1 className={styles.sectionTitle}>Welcome to AC_Movies!</h1>
             <Typography variant='body1'>
-              Thank you for visiting Moovies_AC – your ultimate destination for insightful movie and TV show reviews. We are thrilled to have you here!
+              Thank you for visiting AC_Movies – your ultimate destination for insightful movie and TV show reviews. We are thrilled to have you here!
             </Typography>
-            <h2>🎬 About Moovies_AC</h2>
+            <h2>🎬 About AC_Movies</h2>
             <Typography variant='body1'>
-              At Moovies_AC, we're passionate about the world of cinema and television. Our mission is to provide you with honest and comprehensive reviews, helping you make informed decisions about what to watch next. Whether you're a film buff or a casual viewer, our platform is designed to cater to your diverse tastes and preferences.
+              At AC_Movies, we're passionate about the world of cinema and television. Our mission is to provide you with honest and comprehensive reviews, helping you make informed decisions about what to watch next. Whether you're a film buff or a casual viewer, our platform is designed to cater to your diverse tastes and preferences.
             </Typography>
             <h2>🌟 Constantly Adding Reviews</h2>
             <Typography variant='body1'>
@@ -27,9 +27,9 @@ export default function Home() {
             </Typography>
             <h2>🍿 Discover, Enjoy, and Stay Informed</h2>
             <Typography variant='body1'>
-              Explore our collection of reviews, discover hidden gems, and stay up-to-date with the latest releases. Whether you're into blockbuster films, indie masterpieces, or binge-worthy TV series, Moovies_AC has something for everyone.
+              Explore our collection of reviews, discover hidden gems, and stay up-to-date with the latest releases. Whether you're into blockbuster films, indie masterpieces, or binge-worthy TV series, AC_Movies has something for everyone.
               <br /><br />
-              Sit back, relax, and let Moovies_AC be your guide to the captivating world of movies and TV shows. We hope you enjoy your time here, and don't forget to check back regularly for new reviews and recommendations!
+              Sit back, relax, and let AC_Movies be your guide to the captivating world of movies and TV shows. We hope you enjoy your time here, and don't forget to check back regularly for new reviews and recommendations!
               <br /><br />
               Happy watching!
             </Typography>
